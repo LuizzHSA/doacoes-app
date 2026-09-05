@@ -1,0 +1,123 @@
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "inverse-primary": "#a4c9ff", "on-tertiary-fixed-variant": "#633f00", "on-secondary-fixed": "#00201f", "primary": "#4d93e5", "primary-container": "#2976c7", "on-primary-fixed": "#001c39", "error-container": "#ffdad6", "surface-container-low": "#1a202c", "primary-fixed": "#d4e3ff", "tertiary": "#805200", "surface-container-lowest": "#1a202c", "on-secondary": "#ffffff", "on-secondary-container": "#00706d", "surface-dim": "#1a202c", "secondary-container": "#2D3748", "inverse-surface": "#273141", "secondary-fixed-dim": "#53dad5", "on-surface": "#E2E8F0", "inverse-on-surface": "#ebf1ff", "surface-container-high": "#4A5568", "on-error-container": "#93000a", "on-primary": "#ffffff", "error": "#FC8181", "tertiary-container": "#a16900", "background": "#1A202C", "outline": "#4A5568", "primary-fixed-dim": "#a4c9ff", "surface-bright": "#2D3748", "on-tertiary-container": "#fffbff", "tertiary-fixed-dim": "#ffb955", "on-primary-container": "#fdfcff", "on-surface-variant": "#A0AEC0", "secondary": "#53dad5", "surface-tint": "#0060ac", "on-background": "#E2E8F0", "outline-variant": "#4A5568", "surface-container": "#2D3748", "secondary-fixed": "#74f7f1", "on-tertiary-fixed": "#291800", "on-primary-fixed-variant": "#004883", "tertiary-fixed": "#ffddb4", "surface-variant": "#2D3748", "on-secondary-fixed-variant": "#00504d", "surface": "#2D3748", "on-error": "#ffffff", "surface-container-highest": "#4A5568" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "16px", "lg": "24px", "base": "8px", "md": "16px", "xs": "4px", "sm": "12px", "container_margin": "20px", "xl": "32px" }, "fontFamily": { "display-lg": ["Nunito Sans"], "label-md": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "body-md": ["Nunito Sans"], "headline-md": ["Nunito Sans"], "body-lg": ["Nunito Sans"] } } } }</script><style>@layer base { body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: contain; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background text-on-surface font-body-md"><header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="h-16 px-container_margin flex items-center justify-between"><h1 class="font-headline-sm text-headline-sm text-primary">Explore</h1><div class="flex items-center gap-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="pt-16 min-h-screen bg-background"><div class="flex flex-col w-full pb-24">
+<!-- Search Section -->
+<div class="px-container_margin py-md bg-background sticky top-[64px] z-40">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-xl pr-sm py-sm rounded-full bg-surface text-on-surface font-body-md placeholder:text-on-surface-variant outline-none focus:bg-surface-container-high focus:ring-2 focus:ring-primary transition-all shadow-[0_2px_8px_rgba(0,0,0,0.2)]" placeholder="Buscar por nome ou local..." type="text"/>
+<button class="absolute right-xs top-1/2 -translate-y-1/2 p-xs rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Category Chips -->
+<div class="px-container_margin py-sm overflow-x-auto hide-scrollbar flex gap-sm bg-background">
+<button class="whitespace-nowrap px-md py-xs rounded-full bg-primary text-on-primary font-label-md shadow-[0_4px_12px_rgba(77,147,229,0.3)] transition-transform active:scale-95">Todas</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full bg-surface text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors active:scale-95">Alimentos</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full bg-surface text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors active:scale-95">Educação</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full bg-surface text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors active:scale-95">Saúde</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full bg-surface text-on-surface-variant font-label-md hover:bg-surface-container-high transition-colors active:scale-95">Meio Ambiente</button>
+</div>
+<!-- Featured Map/Location Callout (Moment of Delight) -->
+<div class="px-container_margin mt-md mb-lg">
+<div class="relative rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.2)] bg-surface">
+<div class="w-full h-32 bg-cover bg-center opacity-80" data-location="São Paulo, Brazil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEVJc3imEaf53_95DeIdCoE9dgBvP3Goksyi0OuPlQ5hVJK1ctHXlIpV0sztLfyZKPfLNePuVm_5C_G8Fu4TnHoz5YsJYVXxIcV_WWlOYrl3R0o3r9aUkZ7LInhYxZraF3tGAdi7GF_iqQ3UtVovjDLxX9ScAfI_rNoqaexyLRU3M1Z8IaO6kLmGduFwNYpmYCMIQvEVesUqYwF29fz9r703iyGyjpsQdLzZqyRbAVQZf6xuP7Twnm')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/95 to-transparent flex flex-col justify-end p-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">near_me</span>
+<span class="font-label-md text-on-surface">Causas perto de você</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mt-xs">5 campanhas ativas em sua região</p>
+</div>
+</div>
+</div>
+<!-- Campaign Grid -->
+<div class="px-container_margin flex flex-col gap-lg">
+<h2 class="font-headline-sm text-on-surface mb-xs">Recomendadas para você</h2>
+<!-- Campaign Card 1 -->
+<div class="flex flex-col bg-surface rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.2)] active:scale-[0.98] transition-transform cursor-pointer border border-outline-variant/30">
+<div class="relative w-full aspect-video bg-surface-container" data-alt="Warm, inviting photo of a community kitchen in a sunny Brazilian neighborhood. Volunteers are happily serving hot meals. Vibrant colors, soft natural lighting, documentary style, modern humanist photography, showing empathy and community connection. Primary blue aprons on volunteers." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZgarRgPuuzM0YyYZYl1pVwLOj_o0fCrUnnsp2mpsD4Ny6IbuGcS0Y9Wc50KdPRPMUpLO1jczfWSkiROxk-waGtHTOPDc-zRW7NRu_-4jp3SiUHISXFd_ngJuWV8VFEDTtBQJUFTnRRGZr_8gqXXZL67h1W4ffRtwGd0ySpAB48F0DrPwvSPuwOnW6HIFxDFyGNacQ3blGefrRoGPXFDVyoZZedC5ix5h9Xc1gSqoFVhNnlGzwRtlX')">
+<div class="absolute top-sm left-sm bg-surface/90 backdrop-blur-md px-sm py-xs rounded-md flex items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px] font-variation-settings-fill">restaurant</span>
+<span class="font-label-sm text-on-surface">Alimentos</span>
+</div>
+<div class="absolute top-sm right-sm bg-background/80 backdrop-blur-sm p-xs rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-md flex flex-col gap-sm bg-surface">
+<div>
+<h3 class="font-headline-sm text-on-surface leading-tight">Cozinha Solidária Paraisópolis</h3>
+<p class="font-body-md text-on-surface-variant mt-xs line-clamp-2">Garantindo 500 refeições diárias para famílias em situação de vulnerabilidade.</p>
+</div>
+<div class="flex flex-col gap-xs mt-sm">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-primary">R$ 15.000 <span class="text-on-surface-variant font-normal">arrecadados</span></span>
+<span class="font-label-sm text-on-surface-variant">75%</span>
+</div>
+<div class="w-full h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[75%] rounded-full shadow-[0_0_8px_rgba(83,218,213,0.4)]"></div>
+</div>
+<div class="flex items-center gap-xs mt-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">group</span>
+<span class="font-label-sm text-on-surface-variant">320 apoiadores</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Campaign Card 2 -->
+<div class="flex flex-col bg-surface rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.2)] active:scale-[0.98] transition-transform cursor-pointer border border-outline-variant/30">
+<div class="relative w-full aspect-video bg-surface-container" data-alt="Bright classroom setting in a community center. Children are engaged in learning with new tablets. Soft, hopeful lighting. The teacher is smiling at a student. Modern humanist photography, high quality, clear focus on the joy of education. Soft teal and primary blue accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLsYK0TnsQoIT4XoMVa3Bb_hg2X520g83Xj1ucxH8GGYsmMtsMEdyySVw5KLEQS42--vFoT2k7pISUeFo1wbIbsTgsipKj_4IzVcf9EDxnaLkoPtQ3-6RvCnxq5whvRP-fK19hjU2FG-1rlg9qwdpLfMz755IET_oCWMirMWNUCVseqv7qOtGJcvjocJoxkpRGs8OpYXHPIixFHlm33jFeCDDExz777aFByjkSRNLIMIy_OrFAvvV0')">
+<div class="absolute top-sm left-sm bg-surface/90 backdrop-blur-md px-sm py-xs rounded-md flex items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px] font-variation-settings-fill">school</span>
+<span class="font-label-sm text-on-surface">Educação</span>
+</div>
+</div>
+<div class="p-md flex flex-col gap-sm bg-surface">
+<div>
+<h3 class="font-headline-sm text-on-surface leading-tight">Inclusão Digital Infantil</h3>
+<p class="font-body-md text-on-surface-variant mt-xs line-clamp-2">Equipando o centro comunitário com tablets para aulas de reforço escolar.</p>
+</div>
+<div class="flex flex-col gap-xs mt-sm">
+<div class="flex justify-between items-end">
+<span class="font-label-md text-primary">R$ 8.200 <span class="text-on-surface-variant font-normal">arrecadados</span></span>
+<span class="font-label-sm text-on-surface-variant">40%</span>
+</div>
+<div class="w-full h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[40%] rounded-full shadow-[0_0_8px_rgba(83,218,213,0.4)]"></div>
+</div>
+<div class="flex items-center gap-xs mt-xs text-error">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span class="font-label-sm">Faltam 5 dias</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State / Loading State Hint (Moment of Delight) -->
+<div class="flex flex-col items-center justify-center py-xl text-center bg-surface rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)] border border-outline-variant/30">
+<div class="w-16 h-16 rounded-full bg-background flex items-center justify-center mb-md shadow-inner border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-[32px]">volunteer_activism</span>
+</div>
+<h4 class="font-headline-sm text-on-surface mb-xs">Quer ver mais causas?</h4>
+<p class="font-body-md text-on-surface-variant px-xl mb-md">Sua comunidade está sempre precisando de apoio. Volte mais tarde para novas oportunidades.</p>
+<button class="px-lg py-sm rounded-full border-[1.5px] border-primary text-primary font-label-md hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+        Atualizar Lista
+      </button>
+</div>
+</div>
+</div>
+<style>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style></main><nav class="fixed bottom-0 w-full z-50 bg-background/80 backdrop-blur-xl pb-safe shadow-[0_-1px_8px_rgba(0,0,0,0.2)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-16"><a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined">home</span><span class="font-label-sm text-label-sm">Início</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-full h-full transition-colors text-primary" data-path="explore" href="#"><span class="material-symbols-outlined">explore</span><span class="font-label-sm text-label-sm">Explorar</span></a><a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined">volunteer_activism</span><span class="font-label-sm text-label-sm">Minhas Doações</span></a></div></nav></body></html>

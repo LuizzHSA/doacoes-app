@@ -1,0 +1,225 @@
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary": "#ffb955",
+                "surface-tint": "#a4c9ff",
+                "surface-container-highest": "#2f3542",
+                "tertiary-container": "#c68200",
+                "on-tertiary": "#452b00",
+                "primary-fixed": "#d4e3ff",
+                "background": "#0d131f",
+                "on-background": "#dde2f3",
+                "on-surface-variant": "#c1c7d3",
+                "surface-container-high": "#242a36",
+                "on-primary": "#00315d",
+                "primary": "#a4c9ff",
+                "error-container": "#93000a",
+                "on-secondary-fixed": "#00201f",
+                "surface-container-low": "#161c27",
+                "on-secondary-container": "#003a38",
+                "text-secondary": "#A0AEC0",
+                "on-error": "#690005",
+                "secondary": "#53dad5",
+                "on-tertiary-container": "#3c2500",
+                "on-secondary-fixed-variant": "#00504d",
+                "secondary-fixed-dim": "#53dad5",
+                "on-primary-fixed": "#001c39",
+                "tertiary-fixed-dim": "#ffb955",
+                "primary-fixed-dim": "#a4c9ff",
+                "surface-variant": "#2f3542",
+                "text-primary": "#E2E8F0",
+                "secondary-container": "#00ada9",
+                "on-secondary": "#003735",
+                "on-error-container": "#ffdad6",
+                "surface-container-lowest": "#080e1a",
+                "tertiary-fixed": "#ffddb4",
+                "on-surface": "#dde2f3",
+                "surface-bright": "#333946",
+                "surface-dim": "#0d131f",
+                "on-primary-fixed-variant": "#004883",
+                "error": "#FC8181",
+                "outline": "#8b919d",
+                "primary-container": "#4d93e5",
+                "inverse-on-surface": "#2a303d",
+                "secondary-fixed": "#74f7f1",
+                "inverse-primary": "#0060ac",
+                "on-tertiary-fixed-variant": "#633f00",
+                "inverse-surface": "#dde2f3",
+                "surface-container": "#1a202c",
+                "outline-variant": "#414751",
+                "surface": "#2D3748",
+                "on-primary-container": "#002a51",
+                "on-tertiary-fixed": "#291800",
+                "border": "#4A5568"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "base": "8px",
+                "xl": "32px",
+                "lg": "24px",
+                "xs": "4px",
+                "md": "16px",
+                "sm": "12px",
+                "margin": "20px",
+                "gutter": "16px",
+                "container_margin": "20px"
+        },
+        "fontFamily": {
+                "display-lg": [
+                        "Nunito Sans"
+                ],
+                "label-sm": [
+                        "Nunito Sans"
+                ],
+                "headline-md": [
+                        "Nunito Sans"
+                ],
+                "body-md": [
+                        "Nunito Sans"
+                ],
+                "headline-sm": [
+                        "Nunito Sans"
+                ],
+                "body-lg": [
+                        "Nunito Sans"
+                ],
+                "label-md": [
+                        "Nunito Sans"
+                ],
+                "headline-md-mobile": [
+                        "Nunito Sans"
+                ]
+        },
+        "fontSize": {
+                "display-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md-mobile": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script><style>@layer base { body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: contain; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }</style></head><body class="bg-surface-container text-text-primary font-body-md"><header class="fixed top-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-container_margin flex items-center justify-between"><h1 class="font-headline-sm text-headline-sm text-primary">Confirmation</h1><div class="flex items-center gap-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="pt-16 min-h-screen bg-surface-container pb-20"><div class="flex flex-col w-full h-full pb-20 items-center text-center px-container_margin">
+<div class="w-full max-w-sm mt-xl mb-lg relative flex justify-center">
+<div class="absolute inset-0 bg-secondary/10 rounded-full blur-2xl transform scale-110"></div>
+<img class="relative z-10 w-48 h-48 object-contain drop-shadow-xl animate-[bounce_2s_ease-in-out_infinite] rounded-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLvS5Xo-sRPH1syqaNkzj0d6ReynnRNvq9s_aE6t5F5oyiXgxR4JZNzxJsIN-QHeG94YkeV32CcouR77JtOYg9OFw28VMZFi7Fky2qmlrOtaZqcbhGyC2sGzInw8GpuOISJMosKq2mObzet_4TsAOO0p3wK_hlN_dqNb8yqtvIldN2ciDYhAz45Mx3zBfT9bhVUfkWvc4nbhIBflb93itL0Lleg8qOPHVnMzYMEGwR8aOse0ANkDxzh7gIE"/>
+</div>
+<h2 class="font-headline-md text-headline-md text-text-primary mb-xs">
+        Obrigado por sua doação, João!
+    </h2>
+<p class="font-body-md text-body-md text-text-secondary mb-xl max-w-sm">
+        Sua contribuição de <strong>R$ 50,00</strong> para a campanha "Kits Escolares" foi processada com sucesso.
+    </p>
+<div class="w-full bg-surface rounded-xl p-md mb-xl shadow-[0_4px_20px_rgba(0,0,0,0.2)] border-l-4 border-secondary flex flex-col items-start text-left relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-secondary/10 rounded-full blur-md"></div>
+<div class="flex items-center gap-xs mb-sm relative z-10">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md text-secondary">Seu Impacto</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary relative z-10">
+            Com a sua ajuda, estamos mais próximos de garantir o futuro de 50 crianças no Jardim Esperança.
+        </p>
+</div>
+<div class="w-full bg-surface rounded-xl p-md mb-xl shadow-[0_2px_10px_rgba(0,0,0,0.2)] flex flex-col gap-sm border border-border">
+<h3 class="font-label-md text-label-md text-text-secondary text-left mb-xs border-b border-border pb-xs">Detalhes da Transação</h3>
+<div class="flex justify-between items-center w-full">
+<span class="font-body-md text-body-md text-text-secondary">Data</span>
+<span class="font-body-md text-body-md text-text-primary">24 Out 2023, 14:32</span>
+</div>
+<div class="flex justify-between items-center w-full">
+<span class="font-body-md text-body-md text-text-secondary">Método</span>
+<span class="font-body-md text-body-md text-text-primary">Pix</span>
+</div>
+<div class="flex justify-between items-center w-full">
+<span class="font-body-md text-body-md text-text-secondary">ID</span>
+<span class="font-label-sm text-label-sm text-text-primary opacity-70">#TRX-987654321</span>
+</div>
+</div>
+<div class="w-full flex flex-col gap-sm mt-auto pb-lg">
+<button class="w-full py-md bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-sm active:scale-[0.98]">
+            Ver Minhas Doações
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-md border-2 border-primary text-primary font-label-md text-label-md rounded-lg hover:bg-primary/10 transition-colors flex items-center justify-center gap-sm active:scale-[0.98]">
+            Voltar para o Início
+        </button>
+</div>
+</div>
+<script>
+    // Simple micro-interaction for the success icon to add a bit of delight on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const icon = document.querySelector('img[src="https://lh3.googleusercontent.com/aida/AP1WRLvS5Xo-sRPH1syqaNkzj0d6ReynnRNvq9s_aE6t5F5oyiXgxR4JZNzxJsIN-QHeG94YkeV32CcouR77JtOYg9OFw28VMZFi7Fky2qmlrOtaZqcbhGyC2sGzInw8GpuOISJMosKq2mObzet_4TsAOO0p3wK_hlN_dqNb8yqtvIldN2ciDYhAz45Mx3zBfT9bhVUfkWvc4nbhIBflb93itL0Lleg8qOPHVnMzYMEGwR8aOse0ANkDxzh7gIE"]');
+        if(icon) {
+            icon.style.opacity = '0';
+            icon.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                icon.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                icon.style.opacity = '1';
+                icon.style.transform = 'scale(1)';
+            }, 100);
+        }
+    });
+</script></main><nav class="fixed bottom-0 w-full z-50 bg-surface-container/80 backdrop-blur-xl pb-safe shadow-[0_-1px_8px_rgba(0,0,0,0.4)]" data-active-classes="text-primary"><div class="flex justify-around items-center h-16"><a class="flex flex-col items-center justify-center w-full h-full text-text-secondary hover:text-primary transition-colors" data-path="home" href="#"><span class="material-symbols-outlined">home</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center w-full h-full text-text-secondary hover:text-primary transition-colors" data-path="explore" href="#"><span class="material-symbols-outlined">explore</span><span class="font-label-sm text-label-sm">Explorar</span></a><a class="flex flex-col items-center justify-center w-full h-full text-text-secondary hover:text-primary transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined">volunteer_activism</span><span class="font-label-sm text-label-sm">Minhas Doações</span></a></div></nav></body></html>
