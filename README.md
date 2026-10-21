@@ -48,7 +48,23 @@ export FIREBASE_SERVICE_ACCOUNT_PATH="$PWD/database/serviceAccountKey.json"
 uvicorn database.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-A API disponibiliza `GET /api/campaigns` e `GET /api/donations`. Para inserir as três campanhas iniciais no Firestore, execute uma vez, em outro terminal com o mesmo ambiente:
+A API disponibiliza estas rotas:
+
+| Método | Rota | Acesso |
+| --- | --- | --- |
+| `GET` | `/api/campaigns` | Público |
+| `GET` | `/api/communities?cidade=Curitiba&causa=Educação` | Público; filtros opcionais |
+| `GET` | `/api/communities/{community_id}` | Público |
+| `GET` | `/api/donations` | Público; somente itens disponíveis |
+| `GET` | `/api/donations/{donation_id}` | Público |
+| `POST` | `/api/donations` | Requer token Firebase Auth |
+| `POST` | `/api/donations/{donation_id}/requests` | Requer token Firebase Auth |
+
+Os `POST` recebem `Authorization: Bearer <Firebase ID token>`. Para publicar um item, envie JSON com `titulo` e `descricao`; `local_retirada` e `foto_url` são opcionais. Para solicitar uma doação, faça `POST` sem corpo. A reserva e a criação do match são gravadas na mesma transação. O app Flutter precisa autenticar no Firebase Auth para obter esse token.
+
+Os documentos da coleção `communities` devem ter `name`, `description`, `city`, `state`, `neighborhood`, `address`, `causes` (lista), `latitude`, `longitude` e `verified`. A API só consulta comunidades; cadastre os documentos pelo console do Firestore ou por uma ferramenta administrativa confiável.
+
+Para inserir as três campanhas iniciais no Firestore, execute uma vez, em outro terminal com o mesmo ambiente:
 
 ```bash
 python -m database.seed_campaigns
