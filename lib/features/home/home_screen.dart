@@ -39,7 +39,7 @@ class HomeScreen extends ConsumerWidget {
               style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700),
             ),
             TextButton(
-              onPressed: () => context.go('/explore'),
+              onPressed: () => context.go('/donations'),
               child: const Text('Ver todas'),
             ),
           ],

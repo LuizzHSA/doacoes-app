@@ -19,14 +19,24 @@ class AppShell extends StatelessWidget {
           label: 'Início',
         ),
         NavigationDestination(
-          icon: Icon(Icons.explore_outlined),
-          selectedIcon: Icon(Icons.explore),
-          label: 'Explorar',
+-          icon: Icon(Icons.groups_outlined),
+          selectedIcon: Icon(Icons.groups),
+          label: 'Comunidades',
         ),
         NavigationDestination(
           icon: Icon(Icons.volunteer_activism_outlined),
           selectedIcon: Icon(Icons.volunteer_activism),
-          label: 'Minhas Doações',
+          label: 'Doar',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.favorite_border),
+          selectedIcon: Icon(Icons.favorite),
+          label: 'Doações',
+        ),
+        NavigationDestination(
+          icon: Icon(Icons.person_outline),
+          selectedIcon: Icon(Icons.person),
+          label: 'Perfil',
         ),
       ],
     ),

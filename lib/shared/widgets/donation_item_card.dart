@@ -3,15 +3,17 @@ import 'package:flutter/material.dart';
 import '../models/donation_item.dart';
 
 class DonationItemCard extends StatelessWidget {
-  const DonationItemCard({super.key, required this.item});
+  const DonationItemCard({super.key, required this.item, this.onTap});
 
   final DonationItem item;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) => Card(
     margin: EdgeInsets.zero,
     child: ListTile(
       contentPadding: const EdgeInsets.all(16),
+      onTap: onTap,
       leading: const CircleAvatar(
         child: Icon(Icons.volunteer_activism_outlined),
       ),

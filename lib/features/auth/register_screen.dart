@@ -53,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         );
       return;
     }
-    context.go('/home');
+    context.go('/register/verify-phone');
   }
 
   @override

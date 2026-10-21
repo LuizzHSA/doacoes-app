@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#f9f9ff", "on-tertiary-container": "#fffbff", "inverse-surface": "#273141", "on-tertiary-fixed": "#291800", "surface-container-highest": "#d9e3f9", "on-primary-fixed": "#001c39", "on-primary-fixed-variant": "#004883", "on-secondary-container": "#00706d", "primary": "#005da7", "tertiary-fixed": "#ffddb4", "surface-container-low": "#f0f3ff", "on-surface-variant": "#414751", "surface-container-lowest": "#ffffff", "secondary-container": "#74f7f1", "on-tertiary": "#ffffff", "secondary-fixed": "#74f7f1", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "secondary-fixed-dim": "#53dad5", "inverse-on-surface": "#ebf1ff", "on-primary-container": "#fdfcff", "on-secondary-fixed-variant": "#00504d", "surface-variant": "#d9e3f9", "outline-variant": "#c1c7d3", "inverse-primary": "#a4c9ff", "tertiary": "#805200", "on-error": "#ffffff", "error": "#ba1a1a", "secondary": "#006a67", "background": "#f9f9ff", "surface-tint": "#0060ac", "primary-fixed": "#d4e3ff", "primary-container": "#2976c7", "on-background": "#121c2c", "outline": "#717783", "on-error-container": "#93000a", "tertiary-container": "#a16900", "on-tertiary-fixed-variant": "#633f00", "surface-container": "#e7eeff", "tertiary-fixed-dim": "#ffb955", "on-primary": "#ffffff", "on-secondary-fixed": "#00201f", "surface-dim": "#d0daf0", "surface-container-high": "#dee8ff", "primary-fixed-dim": "#a4c9ff", "on-surface": "#121c2c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "sm": "12px", "base": "8px", "container_margin": "20px", "lg": "24px", "xs": "4px", "md": "16px", "gutter": "16px", "xl": "32px" }, "fontFamily": { "headline-md": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "display-lg": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "body-md": ["Nunito Sans"], "label-md": ["Nunito Sans"], "body-lg": ["Nunito Sans"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-container_margin flex items-center justify-between gap-base"><div class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[22px]">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Região de Ação</span><span class="font-label-md text-label-md text-on-surface font-bold truncate max-w-[150px]">Perfil</span></div></div><div class="flex items-center gap-xs"><button aria-label="Notificações" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 px-container_margin"><div class="flex flex-col w-full pb-6 space-y-lg">
+<!-- Perfil do Usuário e Selo Humanista -->
+<section class="bg-surface-container-lowest rounded-xl p-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-32 h-32 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-md relative">
+<div class="relative shrink-0">
+<div class="w-20 h-20 rounded-full overflow-hidden shadow-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of Camila Silveira Rocha, a smiling warm Brazilian woman in her early thirties, wearing a subtle blue linen shirt, natural daylight, soft bokeh background with indoor plants, authentic and empathetic expression, high resolution photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzkiLPUFNwmo39f9VjK8yfAnbdAHF6LxRB16Xz9zZ3weNwQ0qf0JdDeMU6L7jSohyXci2VFaUIHAXqwPZzBHuSbettIeVWjq7LcUsYTmHGVW-hlCcfBSHN67YAPUkn6X-s34nDoUfW3ICWajblJX3Z5akBkJBRefBSmqAJhx8ApAC7WryNUkdJLodkuM7utfr0ynAPrLUNMs7lzZneL3eAwM72Tx2KsgzOgawOMEgeR8TQjSuKSbRf"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm" title="Nível de Engajamento">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-sm text-[10px] font-bold">OURO</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-xs">
+<h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Camila Silveira</h1>
+<button aria-label="Editar Perfil" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<p class="font-body-md text-on-surface-variant text-label-md flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span class="truncate">Pinheiros, São Paulo - SP</span>
+</p>
+<p class="font-label-sm text-label-sm text-outline mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Membro ativo desde Março de 2023
+        </p>
+</div>
+</div>
+<!-- Impact Dashboard / Métricas de Solidariedade -->
+<div class="grid grid-cols-2 gap-xs mt-md pt-md bg-surface-container-low rounded-lg p-sm">
+<div class="flex flex-col p-xs">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Total Doado</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">R$ 650</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">100% auditado</span>
+</div>
+<div class="flex flex-col p-xs">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Campanhas</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">8</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">comunidades locais</span>
+</div>
+<div class="flex flex-col p-xs mt-1">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Itens Físicos</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">5 itens</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">entregues em mãos</span>
+</div>
+<div class="flex flex-col p-xs mt-1">
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">diversity_1</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Impacto Direto</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-0.5">24 vidas</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">alcançadas e nutridas</span>
+</div>
+</div>
+</section>
+<!-- Filtro Interativo por Abas -->
+<section class="space-y-base">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Histórico e Rastreio</h2>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        Tempo Real
+      </span>
+</div>
+<!-- Abas Estilizadas sem Bordas -->
+<div class="flex bg-surface-container p-1 rounded-xl gap-1" id="filter-tabs" role="tablist">
+<button class="flex-1 py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-bold" id="tab-todas" onclick="switchTab('todas')" type="button">
+        Todas
+      </button>
+<button class="flex-1 py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-dinheiro" onclick="switchTab('dinheiro')" type="button">
+        Em Dinheiro
+      </button>
+<button class="flex-1 py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-itens" onclick="switchTab('itens')" type="button">
+        Itens Físicos
+      </button>
+</div>
+</section>
+<!-- Lista de Contribuições & Timeline de Transparência -->
+<div class="space-y-md" id="cards-container">
+<!-- Card 1: Cestas Básicas (Dinheiro) -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm space-y-sm transition-all" data-category="dinheiro">
+<div class="flex items-start justify-between gap-xs">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-bold">PIX • R$ 100,00</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Ontem às 14:32</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mt-1 leading-snug">Cestas Básicas Emergenciais</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">Comunidade Morro da Cruz</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">local_mall</span>
+</div>
+</div>
+<!-- Status Badge -->
+<div class="bg-secondary-fixed/30 rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-md text-on-surface font-bold">Entregue às famílias</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant truncate">Distribuído pela liderança Dona Marta</p>
+</div>
+</div>
+<!-- Timeline Simplificada -->
+<div class="flex items-center justify-between text-center pt-1 px-1">
+<div class="flex flex-col items-center flex-1">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface mt-1">Recebido</span>
+</div>
+<div class="h-0.5 flex-1 bg-secondary"></div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface mt-1">Comprado</span>
+</div>
+<div class="h-0.5 flex-1 bg-secondary"></div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-5 h-5 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface font-bold mt-1">Famílias</span>
+</div>
+</div>
+<!-- Ações de Comprovação -->
+<div class="pt-1 flex flex-wrap gap-2">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-3 py-1.5 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+          Recibo PDF
+        </button>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-3 py-1.5 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+          Nota Auditada
+        </button>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-3 py-1.5 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">photo_camera</span>
+          Foto Entrega
+        </button>
+</div>
+</article>
+<!-- Card 2: Carrinho de Bebê (Item Físico) -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm space-y-sm transition-all" data-category="itens">
+<div class="flex items-start justify-between gap-xs">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-bold">Item Físico</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">12 de Maio de 2024</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mt-1 leading-snug">Carrinho de Bebê Burigotto</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">Retirada Presencial Concluída</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/40 flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">stroller</span>
+</div>
+</div>
+<!-- Depoimento & Status -->
+<div class="bg-secondary-fixed/30 rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-md text-on-surface font-bold">Retirado com Sucesso</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant">Entregue à beneficiária Júlia M. (mãe do pequeno Theo)</p>
+</div>
+</div>
+<!-- Depoimento Emocionante / Mensagem -->
+<div class="bg-surface-container-low rounded-lg p-3 text-on-surface relative">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">favorite</span>
+<span class="font-label-sm text-label-sm font-bold">Mensagem de Agradecimento</span>
+</div>
+<p class="font-body-md text-[13px] text-on-surface-variant italic">
+          "Camila, muito obrigada! O carrinho está novinho e vai me ajudar demais nas consultas dele no posto. Deus abençoe seu coração generoso!"
+        </p>
+</div>
+<div class="pt-1 flex gap-2">
+<button class="w-full bg-surface-container text-on-surface hover:bg-surface-container-high py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors font-bold">
+<span class="material-symbols-outlined text-[16px] text-primary">forum</span>
+          Ver histórico completo de mensagens
+        </button>
+</div>
+</article>
+<!-- Card 3: Material Escolar (Dinheiro em Andamento) -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm space-y-sm transition-all" data-category="dinheiro">
+<div class="flex items-start justify-between gap-xs">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-bold">Cartão • R$ 50,00</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">28 de Abril de 2024</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mt-1 leading-snug">Material Escolar Volta às Aulas</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">Vila Esperança • 120 crianças atendidas</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">backpack</span>
+</div>
+</div>
+<!-- Status Amarelo / Em Compra -->
+<div class="bg-tertiary-fixed/30 rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">pending</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-md text-on-surface font-bold">Meta atingida • Compras em cotação</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant">Aquisição em lote com 18% de desconto comunitário</p>
+</div>
+</div>
+<!-- Barra de Transparência -->
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Execução Orçamentária</span>
+<span class="font-bold text-on-surface">65% concluída</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<div class="pt-1 flex gap-2">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-3 py-1.5 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">receipt_long</span>
+          Prestação Parcial
+        </button>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high px-3 py-1.5 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications_active</span>
+          Seguir Atualizações
+        </button>
+</div>
+</article>
+<!-- Card 4: Agasalhos (Item Físico) -->
+<article class="bg-surface-container-lowest rounded-xl p-md shadow-sm space-y-sm transition-all" data-category="itens">
+<div class="flex items-start justify-between gap-xs">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-bold">3 Volumes</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">15 de Abril de 2024</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-on-surface mt-1 leading-snug">Agasalhos e Cobertores de Inverno</h3>
+<p class="font-body-md text-label-md text-on-surface-variant">Ponto de Coleta Morro da Cruz</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/50 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">checkroom</span>
+</div>
+</div>
+<div class="bg-secondary-fixed/30 rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">done_all</span>
+<div class="min-w-0 flex-1">
+<p class="font-label-sm text-label-md text-on-surface font-bold">Distribuído na Ação Noturna de Inverno</p>
+<p class="font-label-sm text-[11px] text-on-surface-variant">Acolhimento de 48 pessoas em situação de rua</p>
+</div>
+</div>
+<div class="pt-1 flex gap-2">
+<button class="w-full bg-surface-container text-on-surface hover:bg-surface-container-high py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">visibility</span>
+          Ver Relatório da Ronda Solidária
+        </button>
+</div>
+</article>
+</div>
+<!-- Central de Configurações, Backend & Conformidade Fiscal -->
+<section class="space-y-base pt-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Conta &amp; Transparência</h2>
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<!-- Notificações -->
+<a class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-md">
+<div class="w-9 h-9 rounded-full bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">Notificações e Avisos</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">WhatsApp e Push instantâneo</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</a>
+<!-- Métodos de Pagamento -->
+<a class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest" href="#">
+<div class="flex items-center gap-md">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">Chaves PIX e Cartões</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">1 chave cadastrada • 1 cartão ativo</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</a>
+<!-- Relatório Fiscal -->
+<a class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest" href="#">
+<div class="flex items-center gap-md">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed/50 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">Declaração de IR Solidário</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Exportar informe consolidado 2023/2024</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</a>
+<!-- Termos e Auditoria Comunitária -->
+<a class="flex items-center justify-between p-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest" href="#">
+<div class="flex items-center gap-md">
+<div class="w-9 h-9 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<div class="text-left">
+<p class="font-label-md text-label-md text-on-surface">Termos &amp; Auditoria Aberta</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Regras comunitárias e prestação de contas</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</a>
+</div>
+<!-- Ação de Sair da Conta (Logout Seguro) -->
+<button class="w-full bg-surface-container-low hover:bg-error-container text-error hover:text-on-error-container py-3 rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transition-all duration-200 mt-2" type="button">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+      Sair da Conta Conectada
+    </button>
+</section>
+</div>
+<script>
+  function switchTab(type) {
+    const tabs = ['todas', 'dinheiro', 'itens'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      if (t === type) {
+        btn.className = "flex-1 py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm font-bold";
+      } else {
+        btn.className = "flex-1 py-2 px-1 text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface";
+      }
+    });
+
+    const cards = document.querySelectorAll('#cards-container article');
+    cards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (type === 'todas') {
+        card.style.display = 'block';
+      } else if (category === type) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="h-16 px-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="comunidades" href="#"><span class="material-symbols-outlined text-[22px]">groups</span><span class="font-label-sm text-label-sm">Comunidades</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="doar-item" href="#"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center shadow-md"><span class="material-symbols-outlined text-on-secondary text-[20px]">volunteer_activism</span></div><span class="font-label-sm text-label-sm font-bold text-secondary">Doar</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="minhas-doacoes" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-sm text-label-sm">Doações</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>

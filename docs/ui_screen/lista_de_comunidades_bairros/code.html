@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#f9f9ff", "on-tertiary-container": "#fffbff", "inverse-surface": "#273141", "on-tertiary-fixed": "#291800", "surface-container-highest": "#d9e3f9", "on-primary-fixed": "#001c39", "on-primary-fixed-variant": "#004883", "on-secondary-container": "#00706d", "primary": "#005da7", "tertiary-fixed": "#ffddb4", "surface-container-low": "#f0f3ff", "on-surface-variant": "#414751", "surface-container-lowest": "#ffffff", "secondary-container": "#74f7f1", "on-tertiary": "#ffffff", "secondary-fixed": "#74f7f1", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "secondary-fixed-dim": "#53dad5", "inverse-on-surface": "#ebf1ff", "on-primary-container": "#fdfcff", "on-secondary-fixed-variant": "#00504d", "surface-variant": "#d9e3f9", "outline-variant": "#c1c7d3", "inverse-primary": "#a4c9ff", "tertiary": "#805200", "on-error": "#ffffff", "error": "#ba1a1a", "secondary": "#006a67", "background": "#f9f9ff", "surface-tint": "#0060ac", "primary-fixed": "#d4e3ff", "primary-container": "#2976c7", "on-background": "#121c2c", "outline": "#717783", "on-error-container": "#93000a", "tertiary-container": "#a16900", "on-tertiary-fixed-variant": "#633f00", "surface-container": "#e7eeff", "tertiary-fixed-dim": "#ffb955", "on-primary": "#ffffff", "on-secondary-fixed": "#00201f", "surface-dim": "#d0daf0", "surface-container-high": "#dee8ff", "primary-fixed-dim": "#a4c9ff", "on-surface": "#121c2c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "sm": "12px", "base": "8px", "container_margin": "20px", "lg": "24px", "xs": "4px", "md": "16px", "gutter": "16px", "xl": "32px" }, "fontFamily": { "headline-md": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "display-lg": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "body-md": ["Nunito Sans"], "label-md": ["Nunito Sans"], "body-lg": ["Nunito Sans"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-container_margin flex items-center justify-between gap-base"><div class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary text-[22px]">location_on</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Região de Ação</span><span class="font-label-md text-label-md text-on-surface font-bold truncate max-w-[150px]">Comunidades</span></div></div><div class="flex items-center gap-xs"><button aria-label="Notificações" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[24px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 px-container_margin"><div class="flex flex-col w-full space-y-md">
+<div class="flex items-center justify-between gap-base bg-surface-container-low p-base rounded-xl">
+<div class="flex items-center gap-xs">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-md text-label-md text-on-surface font-bold">14 comunidades perto de você</span>
+</div>
+<div class="inline-flex p-0.5 bg-surface-container-highest rounded-full" id="view-toggle">
+<button class="flex items-center gap-xs px-base py-0.5 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm transition-all" id="btn-view-list" onclick="switchView('list')" type="button">
+<span class="material-symbols-outlined text-[16px]">view_list</span>
+        Lista
+      </button>
+<button class="flex items-center gap-xs px-base py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm transition-all hover:text-on-surface" id="btn-view-map" onclick="switchView('map')" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+        Mapa
+      </button>
+</div>
+</div>
+<div class="flex items-center gap-base">
+<div class="flex-1 flex items-center bg-surface-container-lowest rounded-xl px-base shadow-sm focus-within:ring-2 focus-within:ring-primary">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0 mr-xs">search</span>
+<input class="w-full py-base bg-transparent border-0 outline-none font-body-md text-body-md text-on-surface placeholder:text-outline-variant" placeholder="Buscar por bairro, causa ou nome..." type="text"/>
+</div>
+<button aria-label="Abrir filtros avançados" class="w-11 h-11 flex items-center justify-center bg-surface-container rounded-xl text-primary shrink-0 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</button>
+</div>
+<div class="flex flex-col space-y-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">near_me</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Próximo a você: <strong class="text-on-surface">São Paulo, SP</strong></span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Mudar</button>
+</div>
+<div class="flex items-center gap-xs overflow-x-auto pb-xs -mx-container_margin px-container_margin">
+<button class="shrink-0 px-base py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-colors">Até 5 km</button>
+<button class="shrink-0 px-base py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container transition-colors">Até 15 km</button>
+<button class="shrink-0 px-base py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container transition-colors">Até 30 km</button>
+<button class="shrink-0 px-base py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container transition-colors">Todas as regiões</button>
+</div>
+</div>
+<div class="flex items-center gap-xs overflow-x-auto pb-xs -mx-container_margin px-container_margin">
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] text-secondary">apps</span>
+      Todas
+    </button>
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">restaurant</span>
+      Alimentação
+    </button>
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">child_care</span>
+      Infância &amp; Creches
+    </button>
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">elderly</span>
+      Apoio a Idosos
+    </button>
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+      Educação Popular
+    </button>
+<button class="shrink-0 flex items-center gap-xs px-sm py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">foundation</span>
+      Reforma &amp; Habitação
+    </button>
+</div>
+<div class="hidden flex-col w-full space-y-base" id="map-preview">
+<div class="relative w-full h-64 rounded-xl overflow-hidden shadow-sm" data-location="São Paulo, Pinheiros, SP" style="">
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean top-down graphic satellite community map centered on West Zone São Paulo with custom colored soft pins, warm sunlight, gentle cyan and navy accents, displaying local NGO clusters in high resolution style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuKfwz0XH7oSeVbbWCI6rq8vYy1w2wL3uTkOPXnUPrsIQMfm3XpzvE-MhYyioV5B2oiawCTwzXFdpCDNb3UDtkxMXUCHTX9QgUjtxgTJjGgTWK8OjSMHyc4yGu9S4r54Ahrl8z4QO8AAMkvYFF0WfEc-x4ISsB4Jh601wDD1jnrHe_uKpvu7kYcTQ4sLZYWYqoucApORB73JkVovBUT7jY6z6eGni0NzqOeibohAvPULzbhEsIHrov')"></div>
+<div class="absolute bottom-base inset-x-base p-base bg-surface-container-lowest/90 backdrop-blur-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-base">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold text-label-sm">4</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Pinheiros &amp; Zona Oeste</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Alta concentração de pontos de arrecadação</span>
+</div>
+</div>
+<button class="text-primary font-label-sm text-label-sm font-bold flex items-center gap-xs">
+          Expandir <span class="material-symbols-outlined text-[16px]">open_in_full</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col space-y-md" id="communities-list">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="relative h-44 w-full">
+<img class="w-full h-full object-cover" data-alt="Warm documentary photography of a vibrant community kitchen and community garden in Morro da Cruz, São Paulo. Diverse volunteers and cheerful community organizers in bright natural morning sunlight, packing fresh produce crates." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZZITXMG8iLvchnqK59XNN3RF554Hl0Lf5Q9EINR-SpbeSlcXBLHC-VpVtJ_RmDNGkadiQI19El3LRf2gkYFs0Mu6ha1zN_Ku1wifGdPdlUA-5IQ_SCoSAuyPnXB3CScW56GMG-2OGF0-XnOsM-2Tbl6004gqJ6AQyo-QE-DR_41vTwiUX_aPhf2YrUQLRGOacfvPdEtLVJB3grkhLFkYKWLwi9REBlsSeE7VJPKApUNpRkRrcw7nO"/>
+<div class="absolute top-base left-base flex gap-xs">
+<span class="px-base py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 1.8 km
+          </span>
+<span class="px-base py-0.5 rounded-full bg-primary/90 backdrop-blur-sm text-on-primary font-label-sm text-label-sm font-semibold">
+            Pinheiros
+          </span>
+</div>
+<div class="absolute bottom-base right-base">
+<span class="px-base py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-secondary font-bold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span> Verificada
+          </span>
+</div>
+</div>
+<div class="p-base flex flex-col space-y-sm">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="px-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Alimentação</span>
+<span class="px-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">Infância</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Associação Morro da Cruz</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+            Polo comunitário que apoia mães solo e gerencia a cozinha solidária local desde 2018.
+          </p>
+</div>
+<div class="grid grid-cols-2 gap-base p-base bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">campaign</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Campanhas</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4 ativas</span>
+</div>
+</div>
+<div class="flex items-center gap-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[18px]">diversity_1</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Impacto</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">312 famílias</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-[10px] font-bold text-on-secondary-fixed">MC</div>
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-[10px] font-bold text-on-tertiary-fixed">JS</div>
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">+18</div>
+</div>
+<button class="px-lg py-base bg-primary text-on-primary rounded-lg font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shadow-sm flex items-center gap-xs" type="button">
+            Conhecer Comunidade
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="relative h-44 w-full">
+<img class="w-full h-full object-cover" data-alt="Empowering portrait of female community educators inside a colorful community learning center in Vila Madalena São Paulo with books, handmade art banners, warm daylight and positive collaborative energy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjlnRMNeBpZ-ebh-hnnQdhoh5I0fiPzdGNSuz5HYedMrvMjgtwYtCcG9prIB0ggU2YePz4MNjsUqfy0mxMXeMFZZBehw0C9aK0DKyeF4lFRxsn2GudEZHIXrXNauIwmeTlgS4ulTZfjKzxkK9d1vqPf5AVX0gja07n8hw0TAlXwcg1OJqt-sIoZmYAyarTILvNGe3KwL4NNxNV5hjP4F-jUz6mo7K6gwA8--ikRYSovAvNEGMyUAlp"/>
+<div class="absolute top-base left-base flex gap-xs">
+<span class="px-base py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 3.4 km
+          </span>
+<span class="px-base py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface-variant font-label-sm text-label-sm font-semibold">
+            Vila Madalena
+          </span>
+</div>
+</div>
+<div class="p-base flex flex-col space-y-sm">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="px-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">Educação</span>
+<span class="px-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Apoio a Mulheres</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Coletivo Esperança Viva</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+            Aulas de reforço escolar, oficinas de costura cooperativa e assistência jurídica comunitária.
+          </p>
+</div>
+<div class="bg-surface-container-low p-base rounded-lg space-y-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Meta do mês (Kits Pedagógicos)</span>
+<span class="text-primary font-bold">78% atingida</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-0.5">
+<span>2 campanhas ativas</span>
+<span>85 famílias assistidas</span>
+</div>
+</div>
+<div class="flex items-center justify-end pt-xs">
+<button class="w-full py-base bg-surface-container text-primary rounded-lg font-label-md text-label-md font-bold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-xs" type="button">
+            Apoiar Campanhas
+            <span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="p-base flex flex-col space-y-sm">
+<div class="flex items-start justify-between gap-base">
+<div>
+<div class="flex items-center gap-xs mb-xs">
+<span class="px-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">Cestas Básicas</span>
+<span class="px-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-bold">Saúde Básica</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Centro Comunitário Jardim das Flores</h2>
+<div class="flex items-center gap-xs mt-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Butantã, SP • 6.2 km de você</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[28px]">local_florist</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Ponto de distribuição de cestas nutricionais e triagem de atendimento básico para moradores da região.
+        </p>
+<div class="flex items-center gap-base p-base bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface font-bold">3 campanhas</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline"></div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">family_restroom</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">190 famílias</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Última doação há 2h</span>
+<button class="px-base py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-bold hover:bg-primary-container transition-colors" type="button">
+            Ver Detalhes
+          </button>
+</div>
+</div>
+</article>
+<!-- Card 4 (Urgente) -->
+<article class="bg-surface-container-lowest rounded-xl p-base shadow-sm hover:shadow-md transition-shadow flex flex-col space-y-sm">
+<div class="flex items-center justify-between">
+<span class="px-base py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">emergency</span> Campanha Urgente
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">8.1 km • Lapa, SP</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Lar de Idosos São Francisco</h2>
+<div class="flex items-center gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Idosos</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Cuidados Médicos</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+          Necessidade imediata de fraldas geriátricas (G/XG) e suplementos alimentares para 42 residentes idosos.
+        </p>
+</div>
+<div class="flex items-center justify-between pt-xs">
+<div class="flex items-center gap-xs text-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+          Restam 3 dias
+        </div>
+<button class="px-base py-1.5 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-bold hover:opacity-90 transition-opacity" type="button">
+          Doar Agora
+        </button>
+</div>
+</article>
+</div>
+<!-- Banner de Indicação / Cadastro -->
+<section class="bg-gradient-to-br from-primary-fixed via-surface-container to-surface-container-high rounded-xl p-base flex flex-col space-y-sm relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">add_home_work</span>
+</div>
+<span class="px-base py-0.5 bg-surface-container-lowest/80 text-primary rounded-full font-label-sm text-label-sm font-bold">Expansão Solidária</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Sua comunidade ainda não está aqui?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+        Indique uma liderança local ou cadastre a associação do seu bairro para receber auxílio direto de voluntários e doadores.
+      </p>
+</div>
+<div class="pt-xs">
+<button class="w-full py-base bg-primary text-on-primary font-label-md text-label-md font-bold rounded-lg shadow-sm hover:bg-primary-container transition-colors flex items-center justify-center gap-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Indicar ou Cadastrar Comunidade
+      </button>
+</div>
+</section>
+</div>
+<script>
+  function switchView(mode) {
+    const listBtn = document.getElementById('btn-view-list');
+    const mapBtn = document.getElementById('btn-view-map');
+    const mapSection = document.getElementById('map-preview');
+    const listSection = document.getElementById('communities-list');
+
+    if (mode === 'map') {
+      mapBtn.className = 'flex items-center gap-xs px-base py-0.5 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm transition-all';
+      listBtn.className = 'flex items-center gap-xs px-base py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm transition-all hover:text-on-surface';
+      mapSection.classList.remove('hidden');
+      mapSection.classList.add('flex');
+    } else {
+      listBtn.className = 'flex items-center gap-xs px-base py-0.5 rounded-full bg-surface-container-lowest text-primary shadow-sm font-label-sm text-label-sm transition-all';
+      mapBtn.className = 'flex items-center gap-xs px-base py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm transition-all hover:text-on-surface';
+      mapSection.classList.add('hidden');
+      mapSection.classList.remove('flex');
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="h-16 px-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="comunidades" href="#"><span class="material-symbols-outlined text-[22px]">groups</span><span class="font-label-sm text-label-sm">Comunidades</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="doar-item" href="#"><div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center shadow-md"><span class="material-symbols-outlined text-on-secondary text-[20px]">volunteer_activism</span></div><span class="font-label-sm text-label-sm font-bold text-secondary">Doar</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="minhas-doacoes" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-sm text-label-sm">Doações</span></a><a class="flex flex-col items-center justify-center gap-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>

@@ -166,7 +166,13 @@ class _ExploreScreenState extends ConsumerState<ExploreScreen> {
                         .map(
                           (item) => Padding(
                             padding: const EdgeInsets.only(bottom: 12),
-                            child: DonationItemCard(item: item),
+                            child: DonationItemCard(
+                              item: item,
+                              onTap: () => context.pushNamed(
+                                'itemDetails',
+                                pathParameters: {'id': item.id},
+                              ),
+                            ),
                           ),
                         )
                         .toList(),

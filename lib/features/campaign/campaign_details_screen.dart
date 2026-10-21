@@ -50,7 +50,10 @@ class CampaignDetailsScreen extends ConsumerWidget {
                 PrimaryButton(
                   label: 'Quero Doar',
                   icon: Icons.volunteer_activism,
-                  onPressed: () => context.pushNamed('confirmation'),
+                  onPressed: () => context.pushNamed(
+                    'checkout',
+                    pathParameters: {'id': campaign.id},
+                  ),
                 ),
               ]),
             ),

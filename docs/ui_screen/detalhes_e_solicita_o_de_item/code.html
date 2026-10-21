@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#f9f9ff", "on-tertiary-container": "#fffbff", "inverse-surface": "#273141", "on-tertiary-fixed": "#291800", "surface-container-highest": "#d9e3f9", "on-primary-fixed": "#001c39", "on-primary-fixed-variant": "#004883", "on-secondary-container": "#00706d", "primary": "#005da7", "tertiary-fixed": "#ffddb4", "surface-container-low": "#f0f3ff", "on-surface-variant": "#414751", "surface-container-lowest": "#ffffff", "secondary-container": "#74f7f1", "on-tertiary": "#ffffff", "secondary-fixed": "#74f7f1", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "secondary-fixed-dim": "#53dad5", "inverse-on-surface": "#ebf1ff", "on-primary-container": "#fdfcff", "on-secondary-fixed-variant": "#00504d", "surface-variant": "#d9e3f9", "outline-variant": "#c1c7d3", "inverse-primary": "#a4c9ff", "tertiary": "#805200", "on-error": "#ffffff", "error": "#ba1a1a", "secondary": "#006a67", "background": "#f9f9ff", "surface-tint": "#0060ac", "primary-fixed": "#d4e3ff", "primary-container": "#2976c7", "on-background": "#121c2c", "outline": "#717783", "on-error-container": "#93000a", "tertiary-container": "#a16900", "on-tertiary-fixed-variant": "#633f00", "surface-container": "#e7eeff", "tertiary-fixed-dim": "#ffb955", "on-primary": "#ffffff", "on-secondary-fixed": "#00201f", "surface-dim": "#d0daf0", "surface-container-high": "#dee8ff", "primary-fixed-dim": "#a4c9ff", "on-surface": "#121c2c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "sm": "12px", "base": "8px", "container_margin": "20px", "lg": "24px", "xs": "4px", "md": "16px", "gutter": "16px", "xl": "32px" }, "fontFamily": { "headline-md": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "display-lg": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "body-md": ["Nunito Sans"], "label-md": ["Nunito Sans"], "body-lg": ["Nunito Sans"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-container_margin flex items-center justify-between gap-base"><div class="flex items-center gap-xs"><button aria-label="Voltar" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate max-w-[220px]">Detalhes Do Item</h1></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-safe px-container_margin"><div class="flex flex-col w-full pb-8 space-y-lg">
+<!-- Gallery & Media Section -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<!-- Main Photo -->
+<div class="relative w-full aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-all duration-300" data-alt="A modern, high quality navy blue Burigotto baby stroller with bassinet attachment sitting in a bright sunlit living room with natural soft lighting, warm wooden floors and vibrant green plants in the background, showing pristine fabric and clean wheels in empathetic community atmosphere" id="main-item-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZgPJu4hQzYTsIbHP2FYblMbTv527H011Z-JYfAxpLzkESEXP4Upa1tOyM8y-Z5KpGk_JVmFOm-HljMocMpM16v7RKBbuYSNxYHo9mFHpbewVJ9sgY_hEdIzqbXhPb0FbYoXVHMlEEmBrbtKSkgp2l2xLIOE5CYms2610ZZeyEXF6u6Z8sQSfUkZKNKzWF7EySan69f3Ii7wTsnSTdd_HAiIHX7_b8Eazqzr4LvzsE82enm8k4cikO"/>
+<!-- Status Badge -->
+<div class="absolute top-sm left-sm bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Disponível para Doação</span>
+</div>
+<!-- Quick Safety Verified Icon Tag -->
+<div class="absolute top-sm right-sm bg-primary/90 backdrop-blur-md text-on-primary px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm font-semibold">Higienizado</span>
+</div>
+</div>
+<!-- Thumbnail Strip -->
+<div class="flex items-center gap-base p-base bg-surface-container-lowest overflow-x-auto no-scrollbar">
+<button class="thumb-btn shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high ring-2 ring-primary transition-all" onclick="switchPhoto(0)">
+<img class="w-full h-full object-cover" data-alt="Close up of the reclining seat and buckle mechanism of the navy blue baby stroller, sparkling clean and thoroughly sanitized" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJBPgmbMhFjO1OqQP9VHbw2LpPBpD4EZkAF2SvI-dq09lt_a0aOHxubhCHmbhxm93GLHfr4MojW3uFhNqKCBOyykay7yAP_mYEM8pr0_A804sqV80U3HaYMhJlneticu6JDrUht3kyoU6KXVPxRSjvc8iCmClt3tywd7p5b1j7yhoPrUgjA9bRm_PYoOw4a2sdTkGAHJSzLcgUEPwinM-mI_0GHf97IkFij7mBaVZs9hvoBbtkVE6j"/>
+</button>
+<button class="thumb-btn shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high opacity-70 hover:opacity-100 transition-all" onclick="switchPhoto(1)">
+<img class="w-full h-full object-cover" data-alt="Detached bassinet moises attachment showing soft padded interior lining in cream white fabric, clean and comfortable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX2OCebqUUUVsmQmU2CfOD4YxKKTmv3iHBbSirAMEp1CrVC4ioGg9ChwmzvHipVkhg3pNvuqYO2fJ0uvb7ZDloLQhPUO7BxCg83MIbhOmCB_a2zFb-f1gj-RhwEGlO9Wld93-BWV7ee_-NQtYoWj92acGZM_S7hMORP_PF26QbXqVLfCWiZgod05oLbZbBGIwKbBNypR9Qg-qbAupXxyGZHCzICKcS6q7NOWZFUX-vUBKxD3Phyl9n"/>
+</button>
+<button class="thumb-btn shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high opacity-70 hover:opacity-100 transition-all" onclick="switchPhoto(2)">
+<img class="w-full h-full object-cover" data-alt="Folded compact state of the Burigotto baby stroller standing upright against a warm neutral wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxs5zwjoWTlWDXFTLAbMa4x3IcQmOSQjmrta1m8dqoSh4IVCjHS3jpsRG0FJzWdCk91MJCd1My76zZiaDB8HHmCN1TlNkmZAfj2TWQdmDTi-1brx-_rhZFbpGr0vl9O2A-Hjv_uujDeV0g09fJnCy4PmmFAEslASDS53QoI4R-vuujPX_qMUxVffOC080-Pz43-aZHsjJui_taHgq16EZLgrI7UiG6UjooRQwONVmZkU-IDeatc2if"/>
+</button>
+<button class="thumb-btn shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container-high opacity-70 hover:opacity-100 transition-all flex flex-col items-center justify-center bg-surface-container text-on-surface-variant" onclick="switchPhoto(3)">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+<span class="font-label-sm text-[10px] leading-tight">+3 fotos</span>
+</button>
+</div>
+</div>
+<!-- Item Title & Key Attributes -->
+<div class="flex flex-col space-y-base">
+<div class="flex flex-wrap items-center gap-xs">
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-bold">
+        Gratuito
+      </span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
+        Bebês &amp; Crianças
+      </span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">
+        Seminovo / Conservado
+      </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold leading-tight">
+      Carrinho de Bebê Reclinável + Moisés (Burigotto)
+    </h2>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-md text-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span>Publicado há 2 horas em São Paulo</span>
+</div>
+</div>
+<!-- Donor Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex flex-col space-y-md">
+<div class="flex items-center gap-md">
+<div class="relative shrink-0 w-14 h-14 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Warm and welcoming portrait of Marina Silveira, a Brazilian mother smiling gently at the camera outdoors in natural sunlight, candid and friendly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa15-96XPU3mc5J-DZUWPNNllLUF3GV-XIHjiAkuKC6Z2YJ7V8oKtdh1RO589tQ7xEJeMWfvX0TIs0pEHRrWrnZXfAaus4fkSC7J9WbxGb5XZCsVmy0iZLlUhWQ9Vs9OV-zhIVjWxQeFqXtpz_KLpgSKPjbIV7wdCYy6Rzqj9ZvlweamQWsuwpOYg0c2RyOwIvI5tEOTL7P2QjDSkn3DGc0tRGm6zO3ppWqvHjr4E1B5xgK0WRO4Vp"/>
+<div class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<h3 class="font-headline-sm text-base text-on-surface font-bold truncate">Marina Silveira</h3>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-label-md text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">near_me</span>
+          Pinheiros, SP • <span class="font-bold text-primary">a 1.2 km de você</span>
+</p>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-sm font-bold text-on-surface">4.9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(14 doações concluídas)</span>
+</div>
+</div>
+</div>
+<!-- Donor Note/Description -->
+<div class="bg-surface-container-low rounded-lg p-md text-on-surface">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Usado por 6 meses pelo meu filho, higienizado e funcionando todas as travas perfeitamente. Gostaria que fosse para uma família que esteja realmente precisando.
+        </p>
+</div>
+</div>
+</div>
+<!-- Pickup Location & Rules Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.04)] space-y-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">share_location</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pontos e Horários de Retirada</h3>
+</div>
+<div class="space-y-sm">
+<div class="flex items-start gap-3 bg-surface-container-low p-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">apartment</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ponto Principal</span>
+<span class="font-body-md text-sm text-on-surface-variant">Portaria de prédio com guarita 24h ou Ponto de Apoio Comunitário Morro da Cruz.</span>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-low p-sm rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">calendar_clock</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Disponibilidade</span>
+<span class="font-body-md text-sm text-on-surface-variant">Segunda a Sexta, das 18h às 21h ou Sábados pela manhã (09h às 12h).</span>
+</div>
+</div>
+</div>
+<!-- Mini map preview pin -->
+<div class="w-full h-32 rounded-lg bg-surface-container overflow-hidden shadow-inner flex items-center justify-center relative" data-location="Pinheiros, São Paulo, SP, Brasil" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-2 left-3 text-on-primary font-label-sm text-xs bg-inverse-surface/80 px-2 py-0.5 rounded-full flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary-fixed">shield_person</span>
+        Ponto Seguro Recomendado
+      </div>
+</div>
+</div>
+<!-- Interactive Request Form Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-[0_4px_20px_rgba(0,0,0,0.04)] space-y-md" id="solicitacao-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Solicitar este Item</h3>
+</div>
+<span class="font-label-sm text-[11px] text-secondary font-bold uppercase tracking-wider bg-secondary-container/40 px-2 py-0.5 rounded">Etapa 1 de 2</span>
+</div>
+<!-- Purpose Selector -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Finalidade do Pedido</label>
+<div class="grid grid-cols-2 gap-base" id="purpose-selector">
+<button class="purpose-opt bg-primary text-on-primary p-3 rounded-lg flex flex-col items-center justify-center gap-1 text-center font-label-md text-sm transition-all shadow-sm" onclick="selectPurpose(this, 'family')" type="button">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+<span>Minha Família</span>
+</button>
+<button class="purpose-opt bg-surface-container text-on-surface-variant p-3 rounded-lg flex flex-col items-center justify-center gap-1 text-center font-label-md text-sm transition-all" onclick="selectPurpose(this, 'community')" type="button">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span>Instituição / Terceiros</span>
+</button>
+</div>
+</div>
+<!-- Message Input -->
+<div class="space-y-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="intro-message">Mensagem para Marina</label>
+<span class="font-label-sm text-[11px] text-on-surface-variant" id="char-counter">108/250</span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-md font-body-md text-sm outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all resize-none placeholder:text-on-surface-variant/60" id="intro-message" oninput="updateCharCount(this)" rows="3">Olá Marina! Acompanho a gestação da Júlia na nossa comunidade e esse carrinho será fundamental para os primeiros passeios do bebê.</textarea>
+<p class="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">lightbulb</span>
+        Mensagens empáticas e transparentes costumam ter aprovação mais rápida.
+      </p>
+</div>
+<!-- Preferred Pickup Slot Selector -->
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Previsão para Retirada Segura</label>
+<div class="grid grid-cols-2 gap-base">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">event</span>
+<select class="bg-transparent font-label-md text-xs text-on-surface outline-none w-full cursor-pointer">
+<option>Amanhã (Quinta-feira)</option>
+<option>Sexta-feira (18h-21h)</option>
+<option>Sábado de Manhã (10h)</option>
+<option>Outra data a combinar</option>
+</select>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<select class="bg-transparent font-label-md text-xs text-on-surface outline-none w-full cursor-pointer">
+<option>18:30 às 19:00</option>
+<option>19:30 às 20:30</option>
+<option>09:30 às 10:30 (Sáb)</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Safe Giving Community Guarantee Box -->
+<div class="bg-secondary-container/30 rounded-xl p-md flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col space-y-0.5">
+<h4 class="font-label-md text-label-md text-on-secondary-container font-bold">Compromisso Comunidade Segura</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+        Itens doados são 100% gratuitos. A retirada em locais públicos iluminados ou portarias credenciadas garante o bem-estar de doadores e solicitantes.
+      </p>
+</div>
+</div>
+<!-- Sticky CTA Container (Floating Bar) -->
+<div class="sticky bottom-0 left-0 right-0 pt-2 pb-safe bg-gradient-to-t from-surface via-surface/95 to-transparent z-40">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-xl flex flex-col space-y-2">
+<button class="w-full bg-primary hover:bg-primary/95 active:scale-[0.99] text-on-primary py-3.5 px-4 rounded-lg font-headline-sm text-base font-bold flex items-center justify-center gap-2 shadow-md transition-all" id="submit-request-btn" onclick="handleSendRequest()">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Enviar Solicitação e Abrir Chat Seguro</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-on-surface-variant font-label-sm text-[11px] text-center">
+<span class="material-symbols-outlined text-error text-[14px]">lock</span>
+<span>Não compartilhe dados bancários, senhas ou realize pagamentos.</span>
+</div>
+</div>
+</div>
+<!-- Interactive Confirmation Modal / Sheet -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-50 flex items-end justify-center hidden opacity-0 transition-opacity duration-300" id="success-sheet">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-2xl p-lg space-y-md shadow-2xl transform translate-y-full transition-transform duration-300" id="success-sheet-content">
+<div class="w-12 h-1.5 bg-surface-container-highest rounded-full mx-auto"></div>
+<div class="w-14 h-14 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[32px]">mark_email_read</span>
+</div>
+<div class="text-center space-y-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-extrabold">Solicitação Enviada!</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Marina receberá sua mensagem agora. O chat seguro já está ativo para alinhamento final.</p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-md space-y-2 text-left">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant font-label-md">Item Solicitado:</span>
+<span class="font-bold text-on-surface">Carrinho Burigotto</span>
+</div>
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant font-label-md">Ponto escolhido:</span>
+<span class="font-bold text-on-surface">Portaria com guarita</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-headline-sm text-sm font-bold flex items-center justify-center gap-2" onclick="closeSuccessSheet()">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+        Ir para Conversa com Marina
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function switchPhoto(index) {
+    const buttons = document.querySelectorAll('.thumb-btn');
+    buttons.forEach((btn, i) => {
+      if (i === index) {
+        btn.classList.add('ring-2', 'ring-primary', 'opacity-100');
+        btn.classList.remove('opacity-70');
+      } else {
+        btn.classList.remove('ring-2', 'ring-primary');
+        btn.classList.add('opacity-70');
+      }
+    });
+  }
+
+  function selectPurpose(btn, type) {
+    const opts = document.querySelectorAll('.purpose-opt');
+    opts.forEach(opt => {
+      opt.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+      opt.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+    btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+  }
+
+  function updateCharCount(textarea) {
+    const counter = document.getElementById('char-counter');
+    if (counter) {
+      counter.innerText = textarea.value.length + '/250';
+    }
+  }
+
+  function handleSendRequest() {
+    const sheet = document.getElementById('success-sheet');
+    const content = document.getElementById('success-sheet-content');
+    if (sheet && content) {
+      sheet.classList.remove('hidden');
+      setTimeout(() => {
+        sheet.classList.remove('opacity-0');
+        content.classList.remove('translate-y-full');
+      }, 10);
+    }
+  }
+
+  function closeSuccessSheet() {
+    const sheet = document.getElementById('success-sheet');
+    const content = document.getElementById('success-sheet-content');
+    if (sheet && content) {
+      content.classList.add('translate-y-full');
+      sheet.classList.add('opacity-0');
+      setTimeout(() => {
+        sheet.classList.add('hidden');
+      }, 300);
+    }
+  }
+</script></main></body></html>

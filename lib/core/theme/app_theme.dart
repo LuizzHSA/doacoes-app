@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract final class AppColors {
-  static const primary = Color(0xFF4A90E2);
-  static const secondary = Color(0xFF48D1CC);
-  static const accent = Color(0xFFF5A623);
-  static const lightBackground = Color(0xFFFFFFFF);
-  static const lightSurface = Color(0xFFF7F9FA);
-  static const lightTextPrimary = Color(0xFF2D3748);
-  static const lightTextSecondary = Color(0xFF718096);
+  static const primary = Color(0xFF005DA7);
+  static const secondary = Color(0xFF006A67);
+  static const accent = Color(0xFF805200);
+  static const lightBackground = Color(0xFFF9F9FF);
+  static const lightSurface = Color(0xFFFFFFFF);
+  static const lightSurfaceContainer = Color(0xFFF0F3FF);
+  static const lightTextPrimary = Color(0xFF121C2C);
+  static const lightTextSecondary = Color(0xFF414751);
   static const darkBackground = Color(0xFF1A202C);
   static const darkSurface = Color(0xFF2D3748);
   static const darkTextPrimary = Color(0xFFE2E8F0);
   static const darkTextSecondary = Color(0xFFA0AEC0);
+  static const surfaceContainer = Color(0xFFE7EEFF);
+  static const surfaceContainerHigh = Color(0xFFD9E3F9);
+  static const secondaryContainer = Color(0xFF74F7F1);
 }
 
 abstract final class AppTheme {
@@ -25,7 +30,7 @@ abstract final class AppTheme {
       brightness: brightness,
       primary: AppColors.primary,
       secondary: AppColors.secondary,
-      surface: isDark ? AppColors.darkSurface : AppColors.lightSurface,
+      surface: isDark ? AppColors.darkSurface : AppColors.lightBackground,
     );
     final text = isDark
         ? AppColors.darkTextPrimary
@@ -40,8 +45,9 @@ abstract final class AppTheme {
       scaffoldBackgroundColor: isDark
           ? AppColors.darkBackground
           : AppColors.lightBackground,
-      fontFamily: 'NunitoSans',
-      textTheme: ThemeData(brightness: brightness).textTheme
+      textTheme: GoogleFonts.nunitoSansTextTheme(
+        ThemeData(brightness: brightness).textTheme,
+      )
           .apply(bodyColor: text, displayColor: text)
           .copyWith(
             headlineSmall: TextStyle(
@@ -59,7 +65,7 @@ abstract final class AppTheme {
           ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: isDark ? AppColors.darkSurface : Colors.white,
+        fillColor: isDark ? AppColors.darkSurface : AppColors.lightSurface,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 15,

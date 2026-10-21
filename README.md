@@ -23,16 +23,23 @@ Aplicativo Flutter de doações para campanhas solidárias: explore campanhas, v
 
 ## Rotas
 
-| Rota                        | Tela                  |
-| --------------------------- | --------------------- |
-| `/home`                     | Home (inicial)        |
-| `/explore`                  | Explorar campanhas    |
-| `/profile`                  | Perfil                |
-| `/campaign/:id`             | Detalhes da campanha  |
-| `/campaign/:id/confirmacao` | Confirmação de doação |
-| `/login`                    | Login                 |
+| Rota | Tela |
+| --- | --- |
+| `/home` | Início |
+| `/communities` | Lista de comunidades |
+| `/communities/:id` | Detalhes da comunidade |
+| `/donate` | Cadastro de doação de item |
+| `/donations` | Campanhas e itens disponíveis |
+| `/items/:id` | Detalhes e solicitação de item |
+| `/profile` | Perfil e histórico |
+| `/campaign/:id` | Detalhes da campanha |
+| `/campaign/:id/checkout` | Checkout visual da doação |
+| `/campaign/:id/confirmacao` | Confirmação legada |
+| `/login` | Login |
+| `/register` | Cadastro |
+| `/register/verify-phone` | Verificação de telefone |
 
-Home, Explore e Perfil ficam dentro de um shell com navegação inferior (`StatefulShellRoute`).
+Início, Comunidades, Doar, Doações e Perfil ficam no shell de navegação inferior (`StatefulShellRoute`).
 
 ## Como rodar
 
