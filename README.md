@@ -18,7 +18,6 @@ Aplicativo Flutter de doações para campanhas solidárias: explore campanhas, v
 **Banco de dados**
 
 - **Firebase** (planejado) — por enquanto os dados de campanhas ficam em `lib/shared/models/campaign.dart`
-
 **API**
 
 - Nenhuma consumida atualmente; quando o Firebase for integrado, a comunicação será feita pelos SDKs do Firebase`

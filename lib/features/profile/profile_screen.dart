@@ -11,7 +11,7 @@ class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final dark = ref.watch(themeModeProvider);
+    final dark = ref.watch(themeModeProvider) == ThemeMode.dark;
     return Scaffold(
       appBar: PageHeader(title: 'Minhas Doações', onProfile: () {}),
       body: ListView(

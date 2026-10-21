@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^flutter analyze$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

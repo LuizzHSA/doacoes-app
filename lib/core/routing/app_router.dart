@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/auth/login_screen.dart';
+import '../../features/auth/register_screen.dart';
 import '../../features/campaign/campaign_details_screen.dart';
 import '../../features/campaign/donation_confirmation_screen.dart';
 import '../../features/explore/explore_screen.dart';
@@ -15,6 +16,11 @@ final appRouter = GoRouter(
       path: '/login',
       name: 'login',
       builder: (_, _) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/register',
+      name: 'register',
+      builder: (_, _) => const RegisterScreen(),
     ),
     GoRoute(
       path: '/campaign/:id',
