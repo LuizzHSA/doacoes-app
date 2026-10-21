@@ -8,6 +8,17 @@ class Campaign {
     required this.goal,
     required this.supporters,
   });
+
+  factory Campaign.fromJson(Map<String, dynamic> json) => Campaign(
+    id: json['id'] as String? ?? '',
+    title: json['title'] as String? ?? '',
+    category: json['category'] as String? ?? '',
+    description: json['description'] as String? ?? '',
+    raised: _toDouble(json['raised']),
+    goal: _toDouble(json['goal']),
+    supporters: _toDouble(json['supporters']).toInt(),
+  );
+
   final String id;
   final String title;
   final String category;
@@ -15,36 +26,9 @@ class Campaign {
   final double raised;
   final double goal;
   final int supporters;
-  double get progress => (raised / goal).clamp(0, 1);
+  double get progress => goal <= 0 ? 0 : (raised / goal).clamp(0, 1);
 }
 
-const campaigns = [
-  Campaign(
-    id: 'kits-escolares',
-    title: 'Kits Escolares para o Jardim Esperança',
-    category: 'Educação',
-    description: 'Vamos equipar 50 crianças com o material necessário para um início de ano letivo digno e cheio de potencial.',
-    raised: 3500,
-    goal: 5000,
-    supporters: 242,
-  ),
-  Campaign(
-    id: 'cozinha-solidaria',
-    title: 'Cozinha Solidária Paraisópolis',
-    category: 'Alimentos',
-    description: 'Garantindo 500 refeições diárias para famílias em situação de vulnerabilidade.',
-    raised: 15000,
-    goal: 20000,
-    supporters: 320,
-  ),
-  Campaign(
-    id: 'agasalho',
-    title: 'Campanha do Agasalho',
-    category: 'Saúde',
-    description:
-        'Aquecendo famílias durante o inverno com roupas e cobertores.',
-    raised: 2800,
-    goal: 5000,
-    supporters: 118,
-  ),
-];
+
+double _toDouble(Object? value) =>
+    value is num ? value.toDouble() : double.tryParse('$value') ?? 0;

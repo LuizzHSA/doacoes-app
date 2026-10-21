@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/state/app_providers.dart';
 import '../../core/theme/app_theme.dart';
 import '../../shared/models/campaign.dart';
 import '../../shared/widgets/app_button.dart';
 import '../../shared/widgets/timeline_step.dart';
 
-class CampaignDetailsScreen extends StatelessWidget {
+class CampaignDetailsScreen extends ConsumerWidget {
   const CampaignDetailsScreen({super.key, required this.campaignId});
   final String campaignId;
 
   @override
-  Widget build(BuildContext context) {
-    final campaign = campaigns.firstWhere(
-      (item) => item.id == campaignId,
-      orElse: () => campaigns.first,
-    );
-    return Scaffold(
+  Widget build(BuildContext context, WidgetRef ref) {
+    return ref.watch(campaignProvider(campaignId)).when(
+      data: (campaign) => Scaffold(
       appBar: AppBar(title: const Text('Detalhes')),
       body: CustomScrollView(
         slivers: [
@@ -57,6 +56,21 @@ class CampaignDetailsScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      ),
+      loading: () => const Scaffold(
+        appBar: AppBar(title: Text('Detalhes')),
+        body: Center(child: CircularProgressIndicator()),
+      ),
+      error: (_, _) => Scaffold(
+        appBar: AppBar(title: const Text('Detalhes')),
+        body: Center(
+          child: TextButton.icon(
+            onPressed: () => ref.invalidate(campaignProvider(campaignId)),
+            icon: const Icon(Icons.refresh),
+            label: const Text('Não foi possível carregar. Tentar novamente'),
+          ),
+        ),
       ),
     );
   }

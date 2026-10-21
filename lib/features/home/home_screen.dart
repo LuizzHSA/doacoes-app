@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../core/state/app_providers.dart';
 import '../../core/theme/app_theme.dart';
 import '../../shared/models/campaign.dart';
 import '../../shared/widgets/app_shell.dart';
 import '../../shared/widgets/campaign_card.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
   @override
-  Widget build(BuildContext context) => Scaffold(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final campaignsAsync = ref.watch(campaignsProvider);
+    return Scaffold(
     appBar: PageHeader(
       title: 'Início',
       onProfile: () => context.pushNamed('login'),
@@ -43,13 +47,25 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(height: 12),
         SizedBox(
           height: 365,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemCount: 2,
-            separatorBuilder: (_, _) => const SizedBox(width: 16),
-            itemBuilder: (_, index) => SizedBox(
-              width: 320,
-              child: CampaignCard(campaign: campaigns[index]),
+          child: campaignsAsync.when(
+            data: (campaigns) => campaigns.isEmpty
+                ? const Center(child: Text('Nenhuma campanha disponível.'))
+                : ListView.separated(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: campaigns.length,
+                    separatorBuilder: (_, _) => const SizedBox(width: 16),
+                    itemBuilder: (_, index) => SizedBox(
+                      width: 320,
+                      child: CampaignCard(campaign: campaigns[index]),
+                    ),
+                  ),
+            loading: () => const Center(child: CircularProgressIndicator()),
+            error: (_, _) => Center(
+              child: TextButton.icon(
+                onPressed: () => ref.invalidate(campaignsProvider),
+                icon: const Icon(Icons.refresh),
+                label: const Text('Não foi possível carregar. Tentar novamente'),
+              ),
             ),
           ),
         ),
@@ -57,8 +73,9 @@ class HomeScreen extends StatelessWidget {
         const Text(
           'Impacto na Comunidade',
           style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700),
-        ),
-        const SizedBox(height: 14),
+        ],
+      );
+      }
         const _ImpactTile(
           icon: Icons.check_circle_outline,
           date: 'Hoje, 14:30',
